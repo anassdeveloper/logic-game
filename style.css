@@ -1,0 +1,198 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+*::before,
+*::after{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: #ED705C;
+}
+
+.container{
+    width: 100vw;
+    max-width: 40rem;
+    padding: 8rem;
+    margin: 0 auto;
+}
+
+.game{
+    position: relative;
+    padding: 3rem;
+    background-color: #D6B049;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.heading-1{
+    position: relative;
+    font-size: 2.6rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 2rem;
+    z-index: 10;
+}
+
+.box-game {
+    list-style: none;
+    background: #9749D6;
+    border-radius: 20px;
+    padding: 1rem 2rem;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.box-game li{
+    background: #fff;
+    width: 4rem;
+    height: 4rem;
+    margin: .5rem;
+    font-size: 1.9rem;
+    font-weight: bold;
+    border-radius: 50%;
+    color: #9749D6;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 3px 5px rgba(0,0,0,.5);
+    transition: all .3s ease-in;
+}
+
+.box-game li:hover{
+    background:#ED705C;
+    color: #fff;
+    cursor: pointer;
+}
+
+.item-active{
+    background:#ED705C !important;
+    color: #fff !important;
+}
+
+
+
+/*chose list*/
+#chose-list{
+    padding: 1rem;
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 10;
+}
+
+#chose-list li{
+    background: #fff;
+    list-style: none;
+    width: 4rem;
+    height: 4rem;
+    margin: .5rem;
+    font-size: 1.9rem;
+    font-weight: bold;
+    border-radius: 50%;
+    color: #9749D6;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.submitBtn{
+    background-color: #F79323;
+    color: #9749D6;
+    font-size: 1.5rem;
+    padding: 1rem 3rem;
+    display: block;
+    margin: 1rem auto;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    position: relative;
+    z-index: 10;
+    transition: all .2s linear;
+}
+
+.submitBtn:hover{
+    cursor: pointer;
+    transform: scale(1.06);
+    color: #fff;
+}
+
+.finish{
+    background: rgba(0,0,0,.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(2px);
+    display: none;
+}
+
+.finish button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1.2rem 3.2rem;
+    font-size: 2rem;
+    border-radius: 20px;
+    border: none;
+    outline-color: #9749D6;
+    background-color: #D6B049;
+    color: #9749D6;
+    transition: all .3s ease;
+}
+
+.finish button:hover{
+    color: #fff;
+    cursor: pointer;
+    background-color: #ED705C;
+}
+
+.fati{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+    color: #9749D6;
+    text-align: center;
+    margin-top: 2rem;
+}
+@media only screen and (max-width:600px) {
+    .container{
+        padding: 0;
+        margin: 0;
+    }
+    .game{
+        margin-top: 4rem;
+        padding: 1.2rem 2rem;
+    }
+    .item{
+        width: 3rem !important;
+        height: 3rem !important;
+        font-size: 1.4rem !important;
+    }
+    .game ul{
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+        align-items: center;
+        margin: 0;
+    }
+    .heading-1{
+        font-size: 2rem;
+    }
+    .finish button{
+        font-size: 1.5rem;
+        padding: 1rem 2rem;
+    }
+}
