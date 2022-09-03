@@ -168,6 +168,45 @@ body{
     text-align: center;
     margin-top: 2rem;
 }
+
+/*your number list */
+.your_number{
+    padding: 1rem;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+}
+.your_number span{
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 0 .5rem;
+}
+
+/*ads*/
+
+.ads{
+    position: absolute;
+    top: .7rem;
+    left: .7rem;
+    z-index: 10;
+    border-radius: 20px;
+    border: none;
+    display: none;
+    padding: .8rem;
+    color: #9749D6;
+    transition: all .3s ease;
+}
+.ads svg{
+    fill: currentColor;
+    height: 2.3rem;
+    width: 2.3rem;
+}
+.ads:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    background: #333;
+    color: #fff;
+}
 @media only screen and (max-width:600px) {
     .container{
         padding: 0;
