@@ -28,6 +28,8 @@ function logicGame(e){
             msg.textContent = "Game Start";
             correct.textContent = "0";
             document.querySelector('.ads').style.display = "block";
+            document.querySelector('#text_small')
+            .textContent = dataChose.length ? "watch ADS for add Number 1 " : "";
             btn.addEventListener('click', startGame)
         }
     }
@@ -35,7 +37,10 @@ function logicGame(e){
 
 function startGame(){
     this.style.display = "none";
-
+    document.querySelector('.ads')
+    .style.display = "none";
+    document.querySelector('#text_small')
+    .textContent = "";
     dataChose.forEach(el => {
         yourNumber.innerHTML += `<span>${el}</span>`;
     })
@@ -98,9 +103,11 @@ function newGame(){
 }
 
 function ads(e){
-    this.style.opacity = 0;
+  this.style.opacity = 0;
    divFinish.style.display = 'none';
    boxGame.nextElementSibling.style.display = 'none';
+   document.querySelector('#text_small')
+   .textContent = "";
    counter = 5;
    if(e.target.classList.contains('item')){
      dataChose.push(Number(e.target.innerHTML))
